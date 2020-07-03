@@ -1,7 +1,7 @@
 # Afip Manager Proyect
 
 Este es el primer prototipo de un proyect personal que tiene como objetivo ayudar a los contadores
-particulares en el uso de elementos de AFIP para no tener que realizar ciertas cosas de manera.
+particulares en el uso de elementos de AFIP para no tener que realizar ciertas cosas de manera manual.
 
 
 
