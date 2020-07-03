@@ -111,7 +111,7 @@ public class resumenController implements Initializable {
         final Resumen resumen = (Resumen) resumenCliente.getSelectionModel().getSelectedItem();
 
         if(resumen != null){
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Desea eliminar el Resumen del año: " + resumen.getYear() + " mes: " + resumen.getMonth() +
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Desea eliminar el Resumen del año: " + resumen.getAño() + " mes: " + resumen.getMes() +
                     "?", ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
             alert.showAndWait();
 

@@ -10,8 +10,8 @@ public class Resumen implements excelManagment {
 
     private SimpleIntegerProperty id;
     private SimpleIntegerProperty clienteId;
-    private SimpleIntegerProperty year;
-    private SimpleStringProperty month;
+    private SimpleIntegerProperty año;
+    private SimpleStringProperty mes;
     private SimpleIntegerProperty punto_venta;
     private SimpleDoubleProperty gravado;
     private SimpleDoubleProperty iva;
@@ -20,8 +20,8 @@ public class Resumen implements excelManagment {
     public Resumen() {
         this.id = new SimpleIntegerProperty();
         this.clienteId = new SimpleIntegerProperty();
-        this.year = new SimpleIntegerProperty();
-        this.month = new SimpleStringProperty();
+        this.año = new SimpleIntegerProperty();
+        this.mes = new SimpleStringProperty();
         this.punto_venta = new SimpleIntegerProperty();
         this.gravado = new SimpleDoubleProperty();
         this.iva = new SimpleDoubleProperty();
@@ -32,8 +32,8 @@ public class Resumen implements excelManagment {
 
         this.id = new SimpleIntegerProperty();
         this.clienteId = new SimpleIntegerProperty();
-        this.year = new SimpleIntegerProperty();
-        this.month = new SimpleStringProperty();
+        this.año = new SimpleIntegerProperty();
+        this.mes = new SimpleStringProperty();
         this.punto_venta = new SimpleIntegerProperty();
 
 
@@ -77,28 +77,28 @@ public class Resumen implements excelManagment {
         this.clienteId.set(clienteId);
     }
 
-    public int getYear() {
-        return year.get();
+    public int getAño() {
+        return año.get();
     }
 
-    public SimpleIntegerProperty yearProperty() {
-        return year;
+    public SimpleIntegerProperty añoProperty() {
+        return año;
     }
 
-    public void setYear(int year) {
-        this.year.set(year);
+    public void setAño(int año) {
+        this.año.set(año);
     }
 
-    public String getMonth() {
-        return month.get();
+    public String getMes() {
+        return mes.get();
     }
 
-    public SimpleStringProperty monthProperty() {
-        return month;
+    public SimpleStringProperty mesProperty() {
+        return mes;
     }
 
-    public void setMonth(String month) {
-        this.month.set(month);
+    public void setMes(String mes) {
+        this.mes.set(mes);
     }
 
     public int getPunto_venta() {
@@ -152,9 +152,9 @@ public class Resumen implements excelManagment {
     @Override
     public void toExcel(Row row){
         row.createCell(0).setCellValue("Año");
-        row.createCell(1).setCellValue(this.getYear());
+        row.createCell(1).setCellValue(this.getAño());
         row.createCell(2).setCellValue("Mes");
-        row.createCell(3).setCellValue(this.getMonth());
+        row.createCell(3).setCellValue(this.getMes());
         row.createCell(4).setCellValue("Punto de Venta");
         row.createCell(5).setCellValue(this.getPunto_venta());
     }

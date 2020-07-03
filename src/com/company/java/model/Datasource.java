@@ -294,8 +294,8 @@ public class Datasource {
                 Resumen resumen = new Resumen();
                 resumen.setId(results.getInt(1));
                 resumen.setClienteId(id);
-                resumen.setYear(results.getInt(3));
-                resumen.setMonth(results.getString(4));
+                resumen.setAño(results.getInt(3));
+                resumen.setMes(results.getString(4));
                 resumen.setPunto_venta(results.getInt(5));
                 resumen.setGravado(results.getDouble(6));
                 resumen.setIva(results.getDouble(7));

@@ -107,7 +107,7 @@ public class facturasController implements Initializable {
             String fileName = c.getSelectedFile().getAbsolutePath();
 
             if(c.getSelectedFile().getName().isEmpty()){
-                fileName = fileName + this.cliente.getNombre() + this.resumen.getYear() + this.resumen.getMonth();
+                fileName = fileName + this.cliente.getNombre() + this.resumen.getAño() + this.resumen.getMes();
             }
 
 //

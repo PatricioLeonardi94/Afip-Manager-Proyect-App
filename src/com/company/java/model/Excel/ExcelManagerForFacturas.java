@@ -35,7 +35,7 @@ public class ExcelManagerForFacturas {
     private void generateExcel() throws IOException {
 
         XSSFWorkbook workbook = new XSSFWorkbook();
-        XSSFSheet sheet = workbook.createSheet(this.resumen.getYear() + this.resumen.getMonth());
+        XSSFSheet sheet = workbook.createSheet(this.resumen.getAño() + this.resumen.getMes());
 
         Row headerRow = sheet.createRow(0);
         this.cliente.toExcel(headerRow);
