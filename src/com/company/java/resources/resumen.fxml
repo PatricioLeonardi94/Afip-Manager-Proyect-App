@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            fx:controller="com.company.java.resources.resumenController" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../styles/style.css">
+    <center>
+        <VBox spacing="25" minHeight="200">
+            <padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
+        <Label fx:id="nameCliente" ></Label>
+        <TableView fx:id="resumenCliente" prefHeight="600.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn text="Año" prefWidth="90.00">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="año"/>
+                        </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Mes"  prefWidth="100.00">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="mes"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Punto de Venta"  prefWidth="90.00">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="punto_venta"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Importe Grabado Total"  prefWidth="170.00">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="gravado"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="IVA Total"  prefWidth="170.00">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="iva"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Monto Total Abonado"  prefWidth="170.00">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="total"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+            <BorderPane.margin>
+                <Insets right="10.0" />
+            </BorderPane.margin>
+        </TableView>
+        </VBox>
+    </center>
+    <right>
+
+    </right>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.00" spacing="20.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button onAction="#ListFacturasForResumen" maxWidth="Infinity" mnemonicParsing="false" text="Mostrar Facturas del Resumen" />
+                <Button onAction="#AgregarFacturasCliente" id="agregarFacturas" maxWidth="Infinity" mnemonicParsing="false" text="Agregar Facturas Cliente" />
+                <Button onAction="#DeleteResumenCliente" id="delete" maxWidth="Infinity" mnemonicParsing="false" text="Eliminar el Resumen" />
+                <Button onAction="#VolverToClientes" id="volverButton" maxWidth="Infinity" mnemonicParsing="false" text="Volver" />
+            </children>
+            <BorderPane.margin>
+                <Insets right="10.0" />
+            </BorderPane.margin>
+        </HBox>
+    </bottom>
+</BorderPane>

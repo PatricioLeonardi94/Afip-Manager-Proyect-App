@@ -1,0 +1,21 @@
+#HboxTotales{
+    -fx-background-color: white;
+    -fx-font-size: large;
+    -fx-font-weight: bold;
+    -fx-border-style: solid inside;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-padding: 0 0 0 40;
+    -fx-margin-left: 80px;
+}
+
+
+#delete{
+    -fx-background-color: linear-gradient(#ff5400, #be1d00);
+    -fx-text-fill: white;
+}
+
+#delete:hover{
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
